@@ -1,0 +1,101 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+body{
+    font-family: 'Roboto','Noto Sans KR', sans-serif;
+}
+header{
+    width: 100%;
+    height: 30px;
+    padding: 30px 0;
+    position: fixed;
+    left: 0; top: 0;
+    background: rgba(255, 255, 255,0.5);
+    z-index: 1;
+}
+header ul{
+    display: flex;
+    justify-content: end;
+}
+header ul li{
+    margin: 0 20px;
+}
+header ul li a{
+    color: #fff;
+}
+#fullpage h1{
+    font-size: 6em;
+    /* font-weight: bold; */
+    text-align: center;
+}
+/* -----------------------------home-------------------- */
+#fullpage h2{
+    font-size: 5em;
+}
+#fullpage p{background: url(../);}
+
+
+
+
+
+
+
+
+
+
+
+#fullpage .footer .tit{
+    color: #000;
+    float: left;
+    font-size: 12px;
+    line-height: 40px;
+}
+#fullpage .footer .copy{
+    float: right;
+    color: #000;
+    font-size: 12px;
+    line-height: 40px;
+}
+#fullpage .contact .tit{
+    text-align: center;
+    
+}
+#fullpage .contact .tit p{
+    font-size: 3em;
+    margin-bottom: 30px;
+
+}
+#fullpage .contact .tit h1{ 
+    margin-bottom: 50px;
+    position: relative;
+}
+#fullpage .contact .tit h1::before{
+    content: '';
+    width: 500px;
+    height: 2px;
+    background: #000;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+
+
+/* 모바일 버튼 */
+#fullpage .home .m_btn{width: 50px;height: 50px;left: 20px;top: 50px;transform: translateY(-50%); position: absolute; z-index: 100; }
+#fullpage .home .m_btn .line{display:block;width: 100%;height: 100%; }
+
+#fullpage .home .m_btn .line span{ display: block;width: 20px;height: 2px; background: #fff;position:absolute;left: 0;top: 50%;transform: translateY(-50%);transition: all 0.2s ease;}
+#fullpage .home .m_btn .line span::before{content: '';width: 30px;height: 2px; background: #fff;position: absolute;left: 0;top: -14px;transition: all 0.2s ease;}
+#fullpage .home .m_btn .line span::after{content: '';width: 30px;height: 2px; background: #fff;position: absolute;left: 0;top: 14px; transition: all 0.2s ease;}
+
+#fullpage .home .line.on span{background: rgba(0,0,0,0);}
+#fullpage .home .line.on span::before{transform:rotate(45deg); top: 0; left: 1000px;}
+#fullpage .home .line.on span::after{transform:rotate(-45deg); top: 0; left: 1000px;}
+/* 모바일 메뉴 */
+#fullpage .home .m_menu{padding: 20px; position: fixed;width: 90%;height: 100%;background: #000; top: 0px;left: -100%; transition: all 0.5s ease; }
+#fullpage .home .m_menu.on{left: 0;}
+
+#fullpage .home .m_menu li{display: block; }
+#fullpage .home .m_menu li a{color: #fff;  font-size: 6em;}
